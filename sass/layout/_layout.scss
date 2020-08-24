@@ -6,11 +6,32 @@
     min-height: 50rem;
 }
 
+
+
+
+
+
+
+
+
 .header {
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--color-grey-light-2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+
+
+
+
+
+
+
+
 
 .content {
     display: flex;
@@ -24,6 +45,5 @@
 .booking-view {
     background-color: #fff;
     background-color: orangered;
-
     flex: 1;
 }
