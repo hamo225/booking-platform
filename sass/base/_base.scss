@@ -16,6 +16,7 @@ Grey dark 3: #999
 
 */
 
+// Here with the root class is how to apply the css variables as global variables. You always add the variables here in the root.
 :root {
     --color-primary: #eb2f64;
     --color-primary-light: #FF3366;
@@ -39,6 +40,7 @@ Grey dark 3: #999
     padding: 0;
 }
 
+// allows the box sizing to be inherited throughout
 *,
 *::before,
 *::after {
@@ -46,11 +48,13 @@ Grey dark 3: #999
 
 }
 
+// always add border-box so that borders are not included & indicate the font size in %
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1 rem = 10px, 10px/16px = 62.5%
 }
 
+// important for the body - line height, font-weight, bacgroundsize cover and background repeat no repeat & minimum height is always 100% of the viewport width
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
