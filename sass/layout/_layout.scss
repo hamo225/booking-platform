@@ -1,6 +1,6 @@
 .container {
     max-width: 120rem;
-    margin: 8rem auto;
+    margin: 12rem auto;
     background-color: var(--color-grey-light-1);
     box-shadow: var(--shadow-dark);
     min-height: 50rem;
@@ -8,7 +8,7 @@
 
 
 .header {
-    height: 7rem;
+    height: 8rem;
     background-color: #fff;
     border-bottom: var(--color-grey-light-2);
 
@@ -29,6 +29,9 @@
 
 .booking-view {
     background-color: #fff;
+
+    // Testing
     background-color: orangered;
     flex: 1;
+    height: 90rem;
 }

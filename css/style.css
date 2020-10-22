@@ -53,13 +53,13 @@ body {
 
 .container {
   max-width: 120rem;
-  margin: 8rem auto;
+  margin: 12rem auto;
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
   min-height: 50rem; }
 
 .header {
-  height: 7rem;
+  height: 8rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light-2);
   display: flex;
@@ -76,7 +76,8 @@ body {
 .booking-view {
   background-color: #fff;
   background-color: orangered;
-  flex: 1; }
+  flex: 1;
+  height: 90rem; }
 
 .logo {
   height: 3.25rem;
@@ -102,6 +103,9 @@ body {
       outline: none;
       width: 100%;
       background-color: var(--color-grey-light-3); }
+    .search__input::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4); }
   .search__input:focus + .search__button {
     background-color: var(--color-grey-light-2); }
   .search__button {
@@ -151,3 +155,59 @@ body {
     width: 3.75rem;
     border-radius: 50%;
     margin-right: 1rem; }
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column; }
+  .side-nav__item {
+    position: relative; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: .5rem; }
+  .side-nav__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.2s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  .side-nav__item:active::before {
+    background-color: var(--color-primary-dark); }
+  .side-nav__item:hover::before, .side-nav__item--active::before {
+    transform: scaleY(1);
+    width: 100%; }
+  .side-nav__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--color-grey-light-4); }
+  .side-nav__link:link, .side-nav__link:visited {
+    color: var(--color-grey-light-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    position: relative;
+    z-index: 10;
+    padding: 1.5rem 3rem; }
+  .side-nav__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor; }
+
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--color-grey-light-4); }
