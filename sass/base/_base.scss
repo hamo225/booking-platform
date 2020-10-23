@@ -40,6 +40,16 @@ Grey dark 3: #999
 
 }
 
+$--bp-largest: 75rem; //1200px
+$--bp-large: 68.75rem; //1100px
+$--bp-medium: 56.25rem; //900px
+$--bp-small: 37.5rem; //600px
+$--bp-x-small: 33.75rem; //540px
+$--bp-xx-small: 26.87rem; //430px
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -57,6 +67,10 @@ Grey dark 3: #999
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1 rem = 10px, 10px/16px = 62.5%
+
+    @media only screen and (max-width: $--bp-large) {
+        font-size: 50%;
+    }
 }
 
 // important for the body - line height, font-weight, bacgroundsize cover and background repeat no repeat & minimum height is always 100% of the viewport width

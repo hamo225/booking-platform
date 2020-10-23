@@ -4,6 +4,12 @@
     background-color: var(--color-grey-light-1);
     box-shadow: var(--shadow-dark);
     min-height: 50rem;
+
+    @media only screen and (max-width: $--bp-largest) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 
@@ -20,6 +26,11 @@
 
 .content {
     display: flex;
+
+    @media only screen and (max-width: $--bp-medium) {
+        flex-direction: column;
+
+    }
 }
 
 .sidebar {
@@ -37,33 +48,51 @@
     display: flex;
     background-color: var(--color-grey-light-2);
     justify-content: space-between;
-    padding: 4rem;
+    padding: 2rem;
     border-bottom: 1px solid var(--color-grey-light-2);
     font-size: 1.2rem;
+
+    @media only screen and (max-width: $--bp-medium) {
+        padding: 2rem;
+
+    }
+
+    @media only screen and (max-width: $--bp-small) {
+        flex-direction: column;
+    }
 }
 
 .hotel__description {
     display: flex;
     flex-direction: column;
-    flex: 0 0 60%;
-    padding: 3rem;
+    justify-content: space-evenly;
+    flex: 0 0 55%;
+    padding: 0rem 3rem;
     margin-right: 4.5rem;
     background-color: #fff;
     box-shadow: var(--shadow-light);
+
+    @media only screen and (max-width: $--bp-small) {
+        margin-right: 0;
+        padding: 4rem;
+        margin-bottom: 4rem;
+
+    }
 
 }
 
 .hotel__information {
     display: flex;
     flex-direction: column;
-
+    padding: 0;
+    margin: 0;
 }
 
 .hotel__amenities {
     display: flex;
     justify-content: space-around;
-    margin: 4rem 0;
-    padding: 3rem 0 5rem 0;
+    // margin: 4rem 0;
+    padding: 3rem 0;
     border-top: var(--border-line);
     border-bottom: var(--border-line);
 
@@ -72,9 +101,9 @@
         list-style: none;
     }
 
-    &:not(:last-child) {
-        margin-right: 5rem;
-    }
+    // &:not(:last-child) {
+    //     margin-right: 5rem;
+    // }
 
     &__item::before {
         content: "";
@@ -102,6 +131,13 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    @media only screen and (max-width: $--bp-medium) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
 
@@ -116,6 +152,7 @@
     margin-bottom: 4rem;
     font-size: 1.4rem;
     position: relative;
+
 
     &::before {
         content: "\201C";
@@ -146,4 +183,65 @@
 
 
 
+}
+
+.booking__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.title__text {
+    font-size: 2rem;
+
+    @media only screen and (max-width: $--bp-small) {
+        font-size: 1.5rem;
+
+    }
+}
+
+.btn-notVisible {
+    display: none;
+}
+
+.booking-btn {
+    padding: 1.5rem 5rem;
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 25px;
+    margin-top: 1rem;
+    color: var(--color-grey-light-3);
+
+    &:hover {
+        -webkit-animation: pulsate 1s infinite;
+        animation: pulsate 1s infinite;
+
+        .btn-notVisible {
+            display: block;
+        }
+
+        .btn-visible {
+            display: none;
+        }
+    }
+
+    &:active {
+        outline: none;
+
+
+    }
+
+}
+
+@keyframes swoopingBtn {
+    0% {
+        transform-origin: top;
+    }
+
+    50% {}
+
+    100% {}
 }
