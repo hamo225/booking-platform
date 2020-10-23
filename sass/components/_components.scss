@@ -218,3 +218,145 @@
     padding: 2.5rem;
     color: var(--color-grey-light-4);
 }
+
+.gallery {
+    display: flex;
+
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+}
+
+.hotel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-grey-light-2);
+
+
+    &__name {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        padding: 1.5rem;
+        padding-left: 3rem;
+
+        & h1 {
+            text-transform: uppercase;
+            color: var(--color-grey-dark-2);
+            font-weight: 300;
+            letter-spacing: 2px;
+            font-size: 2.5rem;
+        }
+    }
+
+    &__stars {
+        margin-left: 4rem;
+        margin-top: 0;
+        display: flex;
+
+        &__icon {
+            fill: var(--color-primary);
+            width: 1.75rem;
+            height: 1.75rem;
+
+        }
+    }
+
+    &__location {
+        display: flex;
+        margin-right: 3.5rem;
+
+        &__icon {
+            fill: var(--color-primary);
+            height: 1.75rem;
+            width: 1.75rem;
+            margin-right: 1rem;
+        }
+
+        &__address {
+
+            &__btn {
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                color: var(--color-primary);
+                font-size: 1.2rem;
+                border-bottom: solid 1px currentColor;
+                transition: all 0.2s;
+
+                &:hover {
+                    color: var(--color-grey-dark-1);
+                }
+
+                &:focus {
+                    outline: none;
+                    -webkit-animation: pulsate 1s infinite;
+                    animation: pulsate 1s infinite;
+
+                }
+            }
+
+
+
+        }
+    }
+
+    &__rating {
+        padding: 1.5rem;
+        background-color: var(--color-primary);
+        color: white;
+        text-align: center;
+    }
+}
+
+@keyframes pulsate {
+
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    50% {
+        transform: scale(1.5);
+        box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.25);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: none;
+
+    }
+}
+
+
+
+.paragraph:not(:last) {
+    margin-bottom: 2rem;
+}
+
+
+.recommendation {
+    font-size: 1.2rem;
+    color: var(--color-grey-dark-2);
+
+    &__text {
+        margin-right: auto;
+    }
+
+    &__friends {}
+
+    &__photo {
+        box-sizing: content-box;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid white;
+
+        &:not(:last-child) {
+            margin-right: -1.5rem;
+        }
+    }
+
+}
